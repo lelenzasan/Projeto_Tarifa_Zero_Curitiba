@@ -52,9 +52,7 @@ A análise foi conduzida seguindo as seguintes etapas:
 
 ## 📊 Conclusão e Recomendações
 
-* **Viabilidade:** O passe livre aos domingos e feriados é socialmente benéfico, comprovado pelo aumento de passageiros e potenciais beneficiários de baixa renda. Financeiramente, representa um custo anual significativo que precisa ser coberto por subsídio público.
-* **Impacto Social vs. Custo:** A decisão de implementar a política envolve uma ponderação entre o custo do subsídio e os benefícios sociais, como inclusão, aumento de mobilidade e potencial para desenvolvimento econômico local.
-* **Próximos Passos:** Recomenda-se uma análise aprofundada das fontes de receita para financiar o subsídio e um estudo de impacto na capacidade operacional do sistema de transporte para absorver o aumento projetado de passageiros.
+EM CONSTRUÇÃO
 
 ## 📚 Fontes dos Dados
 
