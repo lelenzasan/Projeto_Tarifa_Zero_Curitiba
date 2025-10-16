@@ -61,7 +61,7 @@ A análise foi conduzida seguindo as seguintes etapas:
 * **Dados de passageiros diários:** [URBS - Rede Integrada de Transporte](https://www.urbs.curitiba.pr.gov.br/transporte/rede-integrada-de-transporte/51)
 * **Dados de despesas e tarifa técnica da URBS:** [Painel de Dados da URBS](https://lookerstudio.google.com/embed/u/0/reporting/b1ccd1b5-f21a-4374-af10-bc03226b3273/page/c6jRB)
 * **Arquivos CSV utilizados na análise:**
-    * [Usuários por dia] (https://raw.githubusercontent.com/lelenzasan/Projeto_Tarifa_Zero_Curitiba/main/data/usuarios_dia.xlsx)
+    * [Usuários por dia](https://raw.githubusercontent.com/lelenzasan/Projeto_Tarifa_Zero_Curitiba/main/data/usuarios_dia.xlsx)
     * [Despesas (2014-2024)](https://raw.githubusercontent.com/lelenzasan/Projeto_Tarifa_Zero_Curitiba/main/data/DESPESAS_CWB_2014_2024.csv)
     * [Evolução da Tarifa Técnica (2010-2023)](https://raw.githubusercontent.com/lelenzasan/Projeto_Tarifa_Zero_Curitiba/main/data/1.1-evolucao_tarifa_tec_2010-2023.csv)
     * [Passageiros (2020)](https://raw.githubusercontent.com/lelenzasan/Projeto_Tarifa_Zero_Curitiba/main/data/Passageiro_P%C3%BAblico_2020.csv)
