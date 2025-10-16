@@ -2,7 +2,7 @@
 
 Este repositório contém a análise de dados completa sobre a viabilidade financeira e o impacto social da implementação de uma política de passe livre (tarifa zero) no sistema de transporte público de Curitiba, com foco em domingos e feriados.
 
-> **Objetivo Principal:** Analisar se o passe livre aos domingos e feriados é viável financeiramente, considerando os custos para o governo/URBS e o impacto na inclusão de populações de baixa renda. O projeto utiliza dados históricos e os resultados de um experimento real (a meia tarifa) para criar uma simulação e gerar recomendações.
+> **Objetivo Principal:** Analisar se o passe livre é viável financeiramente, considerando os custos para o governo/URBS e o impacto na inclusão de populações de baixa renda. O projeto utiliza dados históricos e os resultados de um experimento real (a meia tarifa) para criar uma simulação e gerar recomendações.
 
 ## 📈 Principais Resultados
 
