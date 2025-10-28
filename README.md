@@ -1,4 +1,9 @@
 # Análise de Viabilidade do Passe Livre no Transporte Público de Curitiba
+# Projeto desenvolvido por:
+## Leonardo Henrique dos Santos
+## Eliaquim Ferreira
+## Lucas Aksel
+## Ingrid Geraldino
 
 Este repositório contém a análise de dados completa sobre a viabilidade financeira e o impacto social da implementação de uma política de passe livre (tarifa zero) no sistema de transporte público de Curitiba.
 
