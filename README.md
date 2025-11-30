@@ -30,8 +30,8 @@ Os dados primários para esta análise são da URBS (Urbanização de Curitiba S
 *   **Evolução da Tarifa Técnica**: [URBS - Tarifas e Custos](https://www.urbs.curitiba.pr.gov.br/transporte/tarifas-custos)
 *   **Tarifa de Ônibus AMEP**: [AMEP - Agência de Assuntos Metropolitanos do Paraná](https://www.amep.pr.gov.br/Pagina/Tarifa-de-onibus)
 *   **Despesas da Prefeitura de Curitiba**: [Dados Abertos da Prefeitura de Curitiba](https://www.curitiba.pr.gov.br/dadosabertos/)
-*   **Dados Climáticos**: Obtidos de fontes abertas para auxiliar na modelagem preditiva.
-*   **Dados Populacionais**: Evolução da população de Curitiba.
+*   **Dados Climáticos**: [Metostat](https://meteostat.net/pt/station/83842?t=2020-01-01/2025-12-01)
+*   **Dados Populacionais**: [Observatório Setorial Territorial](https://observatorio.sebrae.com.br/profile/geo/curitiba?selector245id=geo4125506&selector836id=porte&selector159id=geo2611606&selector783id=geo4105805)
 
 Para metadados detalhados, dicionário de dados e fontes, consulte o documento: [Metadados](https://drive.google.com/file/d/108jDVaJOp5xkCh_NC_O7HqGugnIgCN_9/view?usp=sharing).
 
