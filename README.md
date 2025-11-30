@@ -1,76 +1,85 @@
-# Análise de Viabilidade do Passe Livre no Transporte Público de Curitiba
-# Projeto desenvolvido por:
-## Leonardo Henrique dos Santos
-## Eliaquim Ferreira
-## Lucas Aksel
-## Ingrid Geraldino
+Análise de Viabilidade do Passe Livre no Transporte Público de Curitiba
+Este projeto visa analisar a viabilidade financeira da implementação do passe livre (tarifa zero) aos domingos e feriados no transporte público de Curitiba-PR, considerando os custos para o governo/URBS e o impacto na inclusão de populações de baixa renda.
 
-Este repositório contém a análise de dados completa sobre a viabilidade financeira e o impacto social da implementação de uma política de passe livre (tarifa zero) no sistema de transporte público de Curitiba.
+📋 Tabela de Conteúdo
+Definição do Problema
+Objetivo do Projeto
+Dados Utilizados
+Metodologia
+Principais Descobertas e Conclusões
+Tecnologias e Bibliotecas
+Estrutura do Projeto
+Como Rodar o Projeto
+Licença
+📝 Definição do Problema
+O transporte público em Curitiba-PR enfrenta desafios como custos operacionais elevados, inclusão social limitada e evasão de passageiros pagantes. A proposta do passe livre busca aumentar o acesso, mas sua sustentabilidade financeira é uma preocupação.
 
-> **Objetivo Principal:** Analisar se o passe livre é viável financeiramente, considerando os custos para o governo/URBS e o impacto na inclusão de populações de baixa renda. O projeto utiliza dados históricos e os resultados de um experimento real (a meia tarifa) para criar uma simulação e gerar recomendações.
+🎯 Objetivo do Projeto
+Analisar a viabilidade financeira do passe livre aos domingos e feriados, utilizando dados históricos e resultados de um experimento real (a meia tarifa) para criar simulações e gerar recomendações.
 
-## 📈 Principais Resultados
+📊 Dados Utilizados
+Os dados primários para esta análise são da URBS (Urbanização de Curitiba S/A), especificamente a série temporal do número de usuários diários do transporte público na cidade. Além disso, foram utilizadas:
 
-* A política de **Meia Tarifa** ("Domingão Paga Meia") resultou em um **aumento estatisticamente significativo de aproximadamente 34%** no número de passageiros pagantes em domingos e feriados.
-* A elasticidade-preço da demanda, calculada a partir do experimento, sugere que o passe livre total poderia gerar um **aumento projetado de 68%** no fluxo de passageiros.
-* A simulação estima que o custo anual para subsidiar o passe livre *apenas em domingos e feriados* seria de aproximadamente **R$ 69,4 milhões**.
-* A análise histórica (2020-2023) mostra que o sistema já opera com subsídios governamentais consideráveis, especialmente durante e após a pandemia de COVID-19, que causou uma queda drástica no número de passageiros.
+Dados de Usuários Diários: URBS - Rede Integrada de Transporte
+Evolução da Tarifa Técnica: URBS - Tarifas e Custos
+Tarifa de Ônibus AMEP: AMEP - Agência de Assuntos Metropolitanos do Paraná
+Despesas da Prefeitura de Curitiba: Dados Abertos da Prefeitura de Curitiba
+Dados Climáticos: Obtidos de fontes abertas para auxiliar na modelagem preditiva.
+Dados Populacionais: Evolução da população de Curitiba.
+Para metadados detalhados, dicionário de dados e fontes, consulte o documento: Metadados.
 
-## 📂 Estrutura do Repositório
+🚀 Metodologia
+O projeto segue uma abordagem multifacetada:
 
-O projeto está organizado da seguinte forma:
+Configuração e Importação: Setup do ambiente com as bibliotecas necessárias e montagem do Google Drive para acesso a arquivos.
+Teste de Hipóteses: Análise do impacto da meia tarifa aos domingos e feriados no fluxo de passageiros pagantes, utilizando teste t de Student.
+Análise da Pandemia: Quantificação do impacto da pandemia (2020-2021) na demanda de passageiros, com visualizações de série temporal e médias móveis.
+Cálculo de KPIs da Meia Tarifa: Estimativa da perda de receita, aumento de custo operacional e impacto líquido (subsídio) da política de meia tarifa, considerando tarifas públicas e técnicas variáveis por ano.
+Simulação da Viabilidade do Passe Livre:
+Elasticidade-Preço da Demanda: Cálculo da elasticidade-preço com base nos dados da meia tarifa.
+Projeção de Demanda: Simulação do aumento de passageiros em um cenário de passe livre (redução de 100% na tarifa).
+Estimativa de Custo Anual: Projeção do subsídio anual necessário para o passe livre aos domingos e feriados.
+Análise Orçamentária: Contextualização do custo do passe livre dentro do orçamento total de subsídio do transporte público de Curitiba para 2025.
+Modelagem Preditiva (Machine Learning):
+Facebook Prophet: Uso do Prophet para prever a tendência de passageiros, capturando sazonalidades (diária, semanal, anual) e impacto de feriados.
+Random Forest Regressor: Desenvolvimento de um modelo de Random Forest para prever o total de passageiros, incorporando features como clima, população, tarifas e lag features.
+💡 Principais Descobertas e Conclusões
+Impacto da Meia Tarifa
+Aumento de Demanda: A política 'Domingão Paga Meia' resultou em um aumento expressivo de +33,90% no uso total do transporte público (e +33,42% entre os pagantes), comprovado estatisticamente.
+Impacto Financeiro Líquido: O investimento diário total (subsídio) para a meia tarifa foi de **R 591.343,48∗∗,compostoporR  181.937,21 de perda de receita e R$ 409.406,28 de aumento de custo operacional.
+Simulação do Passe Livre (Domingos e Feriados)
+Aumento de Demanda Projetado: A implementação do Passe Livre geraria um aumento total de 69.235 passageiros por dia de aplicação (+62,99%).
+Custo Anual Estimado: O custo total anual estimado para o passe livre aos domingos e feriados é de aproximadamente R 31.090.264,78∗∗,oqueequivaleauminvestimentomédiomensalde∗∗R  2.590.855,40.
+Aumento de Subsídio: Representa um aumento de 319.79% no subsídio anual em comparação com o cenário 'antes'.
+Impacto Orçamentário: Este investimento mensal consumiria cerca de 10.33% do subsídio total já destinado ao transporte público de Curitiba (baseado na projeção de R$ 301 milhões para 2025).
+Modelagem Preditiva
+Prophet: O modelo Prophet capturou bem as tendências e sazonalidades históricas, projetando o fluxo futuro de passageiros com intervalos de confiança.
+Random Forest: O modelo Random Forest inicial apresentou um R² muito alto (0.9995), o que foi identificado como vazamento de dados devido à inclusão de TOTAL S/ ISENTOS como feature. Após a correção, as features mais importantes para a previsão de passageiros são:
+DIA_SEMANA (dia da semana)
+Population (população)
+TOTAL_PASSAGEIROS_lag_1 e TOTAL_PASSAGEIROS_lag_7 (passagens do dia anterior e da semana anterior)
+TIPO_DIA_Feriado e is_holiday (indicadores de feriado)
+Períodos da pandemia e o mês também demonstraram alguma influência.
+🛠️ Tecnologias e Bibliotecas
+Python: Linguagem de programação principal.
+Pandas: Manipulação e análise de dados.
+Matplotlib, Seaborn: Visualização de dados.
+SciPy: Testes estatísticos.
+Holidays: Gestão de datas de feriados.
+Prophet: Modelagem de séries temporais para previsão.
+NumPy: Computação numérica.
+Scikit-learn: Modelagem de Machine Learning (Regressão Linear, Random Forest).
+📂 Estrutura do Projeto
+O projeto está organizado como um notebook Jupyter, dividido em seções claras:
 
-* **/data**: Contém todos os datasets brutos utilizados na análise, incluindo dados diários de passageiros, despesas da URBS e a evolução da tarifa técnica.
-* **/notebooks**: Contém o Jupyter Notebook `Espinha_Dorsal_do_Projeto_TRANSPORTE_CWB.ipynb` com todo o código da análise, desde a limpeza e tratamento dos dados até a modelagem, testes de hipóteses e visualizações.
-
-## 🛠️ Metodologia
-
-A análise foi conduzida seguindo as seguintes etapas:
-
-1.  **Configuração do Ambiente:** Importação das bibliotecas necessárias (pandas, matplotlib, scipy, seaborn, prophet) e configuração do acesso aos dados.
-2.  **Carga e Tratamento dos Dados:** Carregamento dos dados de passageiros, limpeza, conversão de tipos e criação de features como dia da semana e tipo de dia (útil, sábado, domingo, feriado).
-3.  **Análise de Impacto da Pandemia:** Classificação dos períodos (Pré, Auge, Pós-pandemia) e análise quantitativa e visual da queda de passageiros.
-4.  **Análise de Impacto da Meia Tarifa:**
-    * Filtragem de dados para domingos e feriados.
-    * Visualização da distribuição de passageiros antes e depois da política.
-    * Aplicação de um **Teste t de Hipótese** para verificar a significância estatística do aumento de passageiros.
-5.  **Simulação da Viabilidade do Passe Livre:**
-    * Cálculo da **Elasticidade-Preço da Demanda** com base nos resultados da meia tarifa.
-    * Projeção do aumento de passageiros em um cenário de tarifa zero.
-    * Estimativa do **custo anual do subsídio** necessário para cobrir a receita perdida e os custos operacionais adicionais.
-6.  **Análise do Subsídio Governamental:** Análise de dados históricos de despesas e tarifa técnica da URBS para contextualizar o custo do novo subsídio.
-
-## 🚀 Como Executar o Projeto
-
-1.  **Clone o repositório:**
-    ```bash
-    git clone [https://github.com/lelenzasan/Projeto_Tarifa_Zero_Curitiba.git](https://github.com/lelenzasan/Projeto_Tarifa_Zero_Curitiba.git)
-    cd Projeto_Tarifa_Zero_Curitiba
-    ```
-2.  **Instale as dependências:**
-    Certifique-se de ter as principais bibliotecas Python para análise de dados instaladas.
-    ```bash
-    pip install pandas matplotlib scipy seaborn prophet holidays
-    ```
-3.  **Execute a análise:**
-    Abra e execute o notebook `notebooks/Espinha_Dorsal_do_Projeto_TRANSPORTE_CWB.ipynb` em um ambiente como Jupyter Lab, Jupyter Notebook ou Google Colab.
-
-## 📊 Conclusão e Recomendações
-
-EM CONSTRUÇÃO
-
-## 📚 Fontes dos Dados
-
-* **Dados de passageiros diários:** [URBS - Rede Integrada de Transporte](https://www.urbs.curitiba.pr.gov.br/transporte/rede-integrada-de-transporte/51)
-* **Dados de despesas e tarifa técnica da URBS:** [Painel de Dados da URBS](https://lookerstudio.google.com/embed/u/0/reporting/b1ccd1b5-f21a-4374-af10-bc03226b3273/page/c6jRB)
-     * Utilizou-se a extensão Web Scrapper para coleta de dados da evolução da tarifa técnica: [Evolução Tarifa](https://www.urbs.curitiba.pr.gov.br/transporte/tarifas-custos)
-* **Arquivos CSV utilizados na análise:**
-    * [Usuários por dia](https://raw.githubusercontent.com/lelenzasan/Projeto_Tarifa_Zero_Curitiba/main/data/usuarios_dia.xlsx)
-    * [Despesas (2014-2024)](https://raw.githubusercontent.com/lelenzasan/Projeto_Tarifa_Zero_Curitiba/main/data/DESPESAS_CWB_2014_2024.csv)
-    * [Evolução da Tarifa Técnica (2010-2023)](https://raw.githubusercontent.com/lelenzasan/Projeto_Tarifa_Zero_Curitiba/main/data/1.1-evolucao_tarifa_tec_2010-2023.csv)
-    * [Passageiros (2020)](https://raw.githubusercontent.com/lelenzasan/Projeto_Tarifa_Zero_Curitiba/main/data/Passageiro_P%C3%BAblico_2020.csv)
-    * [Passageiros (2021)](https://raw.githubusercontent.com/lelenzasan/Projeto_Tarifa_Zero_Curitiba/main/data/Passageiro_P%C3%BAblico_2021.csv)
-    * [Passageiros (2022)](https://raw.githubusercontent.com/lelenzasan/Projeto_Tarifa_Zero_Curitiba/main/data/Passageiro_P%C3%BAblico_2022.csv)
-    * [Passageiros (2023)](https://raw.githubusercontent.com/lelenzasan/Projeto_Tarifa_Zero_Curitiba/main/data/Passageiro_P%C3%BAblico_2023.csv)
-
----
+1 - Configuração do Ambiente: Instalação de bibliotecas e montagem do Drive.
+2 - Teste de Hipóteses - Aumento de fluxo de passageiros pagantes: Análise da meia tarifa.
+3 - Testes de Normalidade: Análise de distribuição e impacto da pandemia.
+4 - Simulação da viabilidade do passe livre: Cálculo da elasticidade e custos do passe livre.
+5 - Machine Learning - Tendência de Passageiros: Modelagem com Prophet e Regressão Linear.
+6 - Modelagem Preditiva: Random Forest para Passageiros: Construção e avaliação do modelo Random Forest.
+🚀 Como Rodar o Projeto
+Clonar o Repositório: Faça um clone deste repositório para sua máquina local ou ambiente de desenvolvimento.
+git clone https://github.com/lelenzasan/Projeto_Tarifa_Zero_Curitiba.git
+Abrir no Google Colab: O projeto foi desenvolvido para ser executado no Google Colab. Abra o arquivo .ipynb diretamente no Colab.
+Executar Células: Execute as células do notebook sequencialmente. Certifique-se de que o Google Drive está montado para que os arquivos de dados sejam acessíveis (a célula from google.colab import drive; drive.mount('/content/drive') cuidará disso).
