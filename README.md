@@ -106,7 +106,3 @@ O projeto está organizado como um notebook Jupyter, dividido em seções claras
     ```
 2.  **Abrir no Google Colab**: O projeto foi desenvolvido para ser executado no Google Colab. Abra o arquivo `.ipynb` diretamente no Colab.
 3.  **Executar Células**: Execute as células do notebook sequencialmente. Certifique-se de que o Google Drive está montado para que os arquivos de dados sejam acessíveis (a célula `from google.colab import drive; drive.mount('/content/drive')` cuidará disso).
-
-## 📄 Licença
-
-Este projeto está licenciado sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
